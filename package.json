@@ -1,0 +1,46 @@
+{
+  "name": "syllabus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && tsc --noEmit -p tsconfig.server.json",
+    "lint": "oxlint",
+    "test": "tsx --test tests/smoke.test.ts",
+    "preview": "vite preview",
+    "server": "tsx watch server/index.ts",
+    "start": "tsx server/index.ts",
+    "dev:all": "concurrently -k \"npm:server\" \"vite\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^12.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "google-auth-library": "^10.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "pdfjs-dist": "^6.2.108",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^9.2.1",
+    "oxlint": "^1.81.0",
+    "tsx": "^4.20.6",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
